@@ -11,10 +11,10 @@ const originalColors = {
 }
 
 const afterColors = {
-    "top-left": "#a2ff7a",
-    "top-right": "#ff837a",
-    "bottom-left": "#f7fcc7",
-    "bottom-right": "#7adeff"
+    "top-left": "#6eff5e", //green
+    "top-right": "#ff837a", //red
+    "bottom-left": "#f7fcc7", //yellow
+    "bottom-right": "#7adeff" //blue
 }
 
 const possibleButtons = [
@@ -76,9 +76,7 @@ function selectRandomButton() {
 }
 
 function removeButtonEventListeners() {
-    for (button of buttons) {
-        button.removeEventListener("click", playerClicked)
-    }
+    buttons.forEach(() => button.removeEventListener("click", playerClicked))
 }
 
 function reset() {
@@ -143,8 +141,6 @@ function displayGameOver(){
 }
 
 function playerFailed() {
-    console.log("Player failed.")
-
     resetButton.disabled = false
     displayGameOver()
 }
@@ -156,7 +152,6 @@ const playerTurn = () => {
 }
 
 const computerTurn = () => {
-    console.log(document.cookie)
     setTimeout(() => {
         let computerIndex = 0
 
@@ -183,7 +178,6 @@ const computerTurn = () => {
 }
 
 function startGame() {
-    console.log("Game starting.")
     startButton.disabled = true
     resetButton.disabled = true
     computerTurn()
