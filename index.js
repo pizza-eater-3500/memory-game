@@ -12,8 +12,8 @@ const originalColors = {
 
 const afterColors = {
     "top-left": "#6eff5e", //green
-    "top-right": "#ff837a", //red
-    "bottom-left": "#f7fcc7", //yellow
+    "top-right": "#ff9999", //red
+    "bottom-left": "#f5e342", //yellow
     "bottom-right": "#7adeff" //blue
 }
 
