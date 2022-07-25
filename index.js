@@ -106,8 +106,8 @@ const gameReset = () => {
 }
 
 function playerClicked() {
-    playBeepSound()
     if (playerIndex < buttonsChose.length) {
+        playBeepSound()
         if (finishedClicking) {
             finishedClicking = false
             const correctButton = buttonsChose[playerIndex]
